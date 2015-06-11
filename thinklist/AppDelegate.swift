@@ -12,11 +12,16 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    
     // Delegate MasterViewController
     var masterViewController: MasterViewController!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+
+        // Header Bar Color
+        // Option 2 - using dot syntax
+        self.window.backgroundColor = NSColor.whiteColor()
+        
         // Insert code here to initialize your application
         masterViewController = MasterViewController(nibName: "MasterViewController", bundle: nil)
         
