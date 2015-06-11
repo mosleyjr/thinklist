@@ -15,20 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jp-IG-tNF">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <clipView key="contentView" ambiguous="YES" misplaced="YES" id="Zp9-lc-tFY">
+                <scrollView verticalHuggingPriority="750" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jp-IG-tNF">
+                    <rect key="frame" x="30" y="30" width="410" height="212"/>
+                    <clipView key="contentView" id="Zp9-lc-tFY">
                         <rect key="frame" x="1" y="1" width="223" height="133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="0oW-fR-iLO">
+                            <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="0oW-fR-iLO">
                                 <rect key="frame" x="0.0" y="0.0" width="223" height="272"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="480" height="272"/>
+                                <size key="minSize" width="410" height="212"/>
                                 <size key="maxSize" width="490" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                <size key="minSize" width="480" height="272"/>
+                                <size key="minSize" width="410" height="212"/>
                                 <size key="maxSize" width="490" height="10000000"/>
                             </textView>
                         </subviews>
@@ -45,8 +45,10 @@
                 </scrollView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="1jp-IG-tNF" secondAttribute="trailing" id="Sqq-mC-z6f"/>
-                <constraint firstAttribute="bottom" secondItem="1jp-IG-tNF" secondAttribute="bottom" id="e6R-Gg-WI9"/>
+                <constraint firstItem="1jp-IG-tNF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="30" id="6di-Dt-lGP"/>
+                <constraint firstAttribute="bottom" secondItem="1jp-IG-tNF" secondAttribute="bottom" constant="30" id="Nub-L4-rVK"/>
+                <constraint firstAttribute="trailing" secondItem="1jp-IG-tNF" secondAttribute="trailing" constant="40" id="b9N-Ru-JEg"/>
+                <constraint firstItem="1jp-IG-tNF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="30" id="bO6-FE-6Fa"/>
             </constraints>
             <point key="canvasLocation" x="301" y="104"/>
         </customView>

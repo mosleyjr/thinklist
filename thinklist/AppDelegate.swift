@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
-        // Header Bar Color
+        // Title/Header Bar Color
         // Option 2 - using dot syntax
         self.window.backgroundColor = NSColor.whiteColor()
         
