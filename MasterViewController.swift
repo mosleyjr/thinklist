@@ -14,43 +14,28 @@ class MasterViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
-    
-    var thinks = [thinklistDoc]()
-    
-    func setupSampleThinks() {
-        let think1 = thinklistDoc(title: "Potato Bug", rating: 4.0,
-            thumbImage:NSImage(named: "potatoBugThumb"), fullImage: NSImage(named: "potatoBug"))
-        let think2 = thinklistDoc(title: "House Centipede", rating: 3.0,
-            thumbImage:NSImage(named: "centipedeThumb"), fullImage: NSImage(named: "centipede"))
-        let think3 = thinklistDoc(title: "Wolf Spider", rating: 5.0,
-            thumbImage:NSImage(named: "wolfSpiderThumb"), fullImage: NSImage(named: "wolfSpider"))
-        thinks = [think1, think2, think3]
-    }
 }
 
-// MARK: - NSTableViewDataSource
-extension MasterViewController: NSTableViewDataSource {
-    func numberOfRowsInTableView(aTableView: NSTableView) -> Int {
-        return self.thinks.count
-    }
+// Content Flow into title bar
+// self.window.styleMask = self.window.styleMask | NSFullSizeContentViewWindowMask;
+// Blurred window effect?
+class BluredWindow: NSWindow {
     
-    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        // 1
-        var cellView: NSTableCellView = tableView.makeViewWithIdentifier(tableColumn!.identifier, owner: self) as! NSTableCellView
+    override func awakeFromNib() {
         
-        // 2
-        if tableColumn!.identifier == "thinklistColumn" {
-            // 3
-            let thinkDoc = self.thinks[row]
-            cellView.imageView!.image = thinkDoc.thumbImage
-            cellView.textField!.stringValue = thinkDoc.data.title
-            return cellView
-        }
+        let visualEffectView = NSVisualEffectView(frame: NSMakeRect(0, 0, 300, 180))
+        visualEffectView.material = NSVisualEffectMaterial.Dark
+        visualEffectView.blendingMode = NSVisualEffectBlendingMode.BehindWindow
+        visualEffectView.state = NSVisualEffectState.Active
         
-        return cellView
+        self.styleMask = self.styleMask | NSFullSizeContentViewWindowMask
+        self.titlebarAppearsTransparent = true
+        //self.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+        
+        self.contentView .addSubview(visualEffectView)
+        
+        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[visualEffectView]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["visualEffectView":visualEffectView]))
+        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[visualEffectView]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views: ["visualEffectView":visualEffectView]))
     }
 }
-
-// MARK: - NSTableViewDelegate
-extension MasterViewController: NSTableViewDelegate {
-}
+// END Blurred window effect
