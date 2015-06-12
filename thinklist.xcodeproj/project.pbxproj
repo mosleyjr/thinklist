@@ -13,6 +13,7 @@
 		760727921B2895F90014E5D9 /* thinklistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760727911B2895F90014E5D9 /* thinklistTests.swift */; };
 		7620ADD61B29E92200C1C21F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7620ADD41B29E92200C1C21F /* MasterViewController.swift */; };
 		7620ADD71B29E92200C1C21F /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7620ADD51B29E92200C1C21F /* MasterViewController.xib */; };
+		762C1CAA1B2A7BB90002CE29 /* WindowClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C1CA91B2A7BB90002CE29 /* WindowClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		760727911B2895F90014E5D9 /* thinklistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thinklistTests.swift; sourceTree = "<group>"; };
 		7620ADD41B29E92200C1C21F /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
 		7620ADD51B29E92200C1C21F /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MasterViewController.xib; path = ../MasterViewController.xib; sourceTree = "<group>"; };
+		762C1CA91B2A7BB90002CE29 /* WindowClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		7607277D1B2895F90014E5D9 /* thinklist */ = {
 			isa = PBXGroup;
 			children = (
+				762C1CA91B2A7BB90002CE29 /* WindowClass.swift */,
 				762C1CA81B2A74C80002CE29 /* Controller */,
 				7620ADD91B29EB3100C1C21F /* Model */,
 				7620ADD81B29EB1800C1C21F /* View */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7620ADD61B29E92200C1C21F /* MasterViewController.swift in Sources */,
+				762C1CAA1B2A7BB90002CE29 /* WindowClass.swift in Sources */,
 				760727811B2895F90014E5D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

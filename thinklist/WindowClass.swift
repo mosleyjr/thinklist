@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  WindowViewController.swift
 //  thinklist
 //
 //  Created by Jason Mosley on 6/11/15.
@@ -8,13 +8,8 @@
 
 import Cocoa
 
-class MasterViewController: NSViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class WindowClass: NSWindow {
+    override func awakeFromNib() {
         // Do view setup here.
-        
-        
     }
 }
-
