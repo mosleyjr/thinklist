@@ -77,8 +77,9 @@
 		7607277D1B2895F90014E5D9 /* thinklist */ = {
 			isa = PBXGroup;
 			children = (
+				762C1CA81B2A74C80002CE29 /* Controller */,
 				7620ADD91B29EB3100C1C21F /* Model */,
-				7620ADD81B29EB1800C1C21F /* GUI */,
+				7620ADD81B29EB1800C1C21F /* View */,
 				760727821B2895F90014E5D9 /* Images.xcassets */,
 				7607277E1B2895F90014E5D9 /* Supporting Files */,
 			);
@@ -110,15 +111,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7620ADD81B29EB1800C1C21F /* GUI */ = {
+		7620ADD81B29EB1800C1C21F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7620ADD41B29E92200C1C21F /* MasterViewController.swift */,
 				7620ADD51B29E92200C1C21F /* MasterViewController.xib */,
 				760727801B2895F90014E5D9 /* AppDelegate.swift */,
 				760727841B2895F90014E5D9 /* MainMenu.xib */,
 			);
-			name = GUI;
+			name = View;
 			sourceTree = "<group>";
 		};
 		7620ADD91B29EB3100C1C21F /* Model */ = {
@@ -126,6 +126,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		762C1CA81B2A74C80002CE29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7620ADD41B29E92200C1C21F /* MasterViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
